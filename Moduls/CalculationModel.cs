@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace LogysticSystemService.Moduls
 {
-    internal class CalculationModel
+    public class CalculationModel
     {
+
+
+        public CarType CarType { get; set; }
+        public Direction Direction { get; set; }
+        public Container Container { get; set; }
+        public Operable Status { get; set; }
+
+
+        public CalculationModel(CarType carType, Direction carDirection, Container carContainer, CarCrushed carCrushed)
+        {
+            CarType = carType;
+            carDirection = carDirection;
+            carContainer = carContainer;
+            carCrushed = carCrushed;
+        }
     }
 }
