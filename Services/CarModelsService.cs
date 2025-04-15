@@ -1,5 +1,5 @@
-﻿using LogistycSystem2.Abstractions.Interfaces;
-using LogistycSystem2.Moduls;
+﻿using LogysticSystemService.Abstractions.Interfaces;
+using LogysticSystemService.Moduls;
 
 namespace LogistycSystem2.Services
 {

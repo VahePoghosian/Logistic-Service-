@@ -1,12 +1,5 @@
-﻿using LogistycSystem2.Abstractions.Interfaces;
-using LogistycSystem2.Moduls;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using LogysticSystemService.Abstractions.Interfaces;
+using LogysticSystemService.Moduls;
 namespace LogistycSystem2.Services
 {
     internal class CarTypeService : IRepository<CarType>

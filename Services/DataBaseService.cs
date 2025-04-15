@@ -1,6 +1,7 @@
-﻿using LogistycSystem2.Abstractions.Interfaces;
-using LogistycSystem2.Moduls;
-using static LogistycSystem2.Moduls.Container;
+﻿using LogysticSystemService.Abstractions.Interfaces;
+using LogysticSystemService.Moduls;
+using static LogysticSystemService.Moduls.CarType;
+using static LogysticSystemService.Moduls.Container;
 
 namespace LogistycSystem2.Services
 {
@@ -22,7 +23,7 @@ namespace LogistycSystem2.Services
             
         }
 
-        public CaculationModel CalculationModel(string from, string to, Container container, CarMark carMark, CarModels carModel)
+        public CalculationModel CalculationModel(string from, string to, Container container, CarMark carMark, CarModels carModel)
         {
             var carType = _carTypeRepository.GetItem(x => x.TypeOfCar == CarTypeEnum.Sedan);
             var carCrushed = _carOperableRepository.GetItem(x => x.Status == Operable.Yes);
@@ -33,7 +34,7 @@ namespace LogistycSystem2.Services
 
 
 
-            return new CaculationModel(carType, carDirection, carContainer, carCrushed);
+            return new CalculationModel(carType, carDirection, carContainer, carCrushed);
         }
     }
 }

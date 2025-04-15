@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LogysticSystemService.Abstractions.Interfaces
 {
-    internal interface IDirectionService
+     interface IDirectionService<T>
     {
+        void Add(T item);
+        void Remove(T item);
+        void Show();
+        void Update(int id);
     }
 }

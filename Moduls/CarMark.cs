@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace LogysticSystemService.Moduls
 {
-    internal class CarMark
+    public class CarMark
     {
+
+        public int Id { get; set; }
+        public string Brand { get; set; }
+        public List<CarModels> Models { get; set; }
+
+        public CarMark(int id, string vrand, List<CarModels> models)
+        {
+            Id = id;
+            Brand = vrand;
+            Models = models;
+
+        }
     }
 }

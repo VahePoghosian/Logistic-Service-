@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LogysticSystemService.Abstractions.Interfaces
 {
-    internal interface IRepository
+     interface IRepository<T>
     {
+
+        void Add(T item);
+        void Delete(T item);
+        void Update(T oldentity, T newentity);
+        T GetItem(Func<T, bool> predicate);
+        List<T> GetAll();
     }
 }

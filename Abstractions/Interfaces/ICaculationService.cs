@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogysticSystemService.Moduls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace LogysticSystemService.Abstractions.Interfaces
 {
-    internal interface ICaculationService
+     interface ICaculationService
     {
+        float Calculate(CalculationModel calculationModel);
+
     }
 }

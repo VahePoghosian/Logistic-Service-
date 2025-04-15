@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LogysticSystemService.Moduls
+﻿namespace LogysticSystemService.Moduls
 {
-    internal class Container
+    public class Container
     {
+
+        public int Id { get; set; }
+        public float Cofficient { get; set; }
+        public IsOpened IsOpenedC { get; set; }
+
+        public Container(int id, float cofficient, IsOpened isOpenedC)
+        {
+            Id = id;
+            Cofficient = cofficient;
+            IsOpenedC = isOpenedC;
+
+        }
+        public enum IsOpened
+        {
+            Yes,
+            No
+        }
+
     }
 }
+

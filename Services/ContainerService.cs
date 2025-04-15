@@ -1,8 +1,5 @@
-﻿using LogistycSystem2.Abstractions.Interfaces;
-using LogistycSystem2.Moduls;
+﻿using LogysticSystemService.Abstractions.Interfaces;
 using System.ComponentModel;
-using Container = LogistycSystem2.Moduls.Container;
-
 namespace LogistycSystem2.Services
 {
     public class ContainerService : IRepository<Container>
