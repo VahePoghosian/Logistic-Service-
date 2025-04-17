@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogistycSystem2.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,13 @@ namespace LogysticSystemService.Moduls
     {
 
         public int Id { get; set; }
-        public string Name { get; set; }
         public float Cofficient { get; set; }
         public CarTypeEnum TypeOfCar { get; set; }
-        public CarType(int id, string name, float cofficient)
+        public CarType(float cofficient,CarTypeEnum carTypeEnum)
         {
-            Id = id;
-            Name = name;
+            Id = new Random().Next(100, 300);
+            TypeOfCar = carTypeEnum;
+
             Cofficient = cofficient;
         }
         public enum CarTypeEnum

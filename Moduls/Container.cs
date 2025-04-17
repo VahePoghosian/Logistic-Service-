@@ -7,9 +7,10 @@
         public float Cofficient { get; set; }
         public IsOpened IsOpenedC { get; set; }
 
-        public Container(int id, float cofficient, IsOpened isOpenedC)
+        public Container(float cofficient, IsOpened isOpenedC)
         {
-            Id = id;
+            Id = new Random().Next(100, 300);
+
             Cofficient = cofficient;
             IsOpenedC = isOpenedC;
 

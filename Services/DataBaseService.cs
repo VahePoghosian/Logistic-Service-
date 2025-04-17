@@ -23,18 +23,14 @@ namespace LogistycSystem2.Services
             
         }
 
-        public CalculationModel CalculationModel(string from, string to, Container container, CarMark carMark, CarModels carModel)
+        public CalculationModel CalculationModel(string from, string to, System.ComponentModel.Container container, CarMark carMark, CarModels carModel)
         {
             var carType = _carTypeRepository.GetItem(x => x.TypeOfCar == CarTypeEnum.Sedan);
             var carCrushed = _carOperableRepository.GetItem(x => x.Status == Operable.Yes);
             var carDirection = _carDirectionRepository.GetItem(x => x.PointA == from && x.PointB == to);
             var carContainer = _carContainer.GetItem(x => x.IsOpenedC == IsOpened.Yes);
-
-
-
-
-
             return new CalculationModel(carType, carDirection, carContainer, carCrushed);
+
         }
     }
 }

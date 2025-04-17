@@ -13,9 +13,9 @@ namespace LogysticSystemService.Moduls
         public string Brand { get; set; }
         public List<CarModels> Models { get; set; }
 
-        public CarMark(int id, string vrand, List<CarModels> models)
+        public CarMark(string vrand, List<CarModels> models)
         {
-            Id = id;
+            Id = new Random().Next(100,300);
             Brand = vrand;
             Models = models;
 

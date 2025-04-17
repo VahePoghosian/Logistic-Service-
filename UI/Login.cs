@@ -58,6 +58,58 @@ namespace LogistycSystem2.UI
             Environment.Exit(0);
             return null;
         }
+        public static int AdminOrUser()
+        {
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+            if (keyInfo.KeyChar >= '1' && keyInfo.KeyChar <= '3')
+            {
+                // Handle the different numeric key presses
+                switch (keyInfo.KeyChar)
+                {
+                    case '1':
+                        for (int i = 0; i < 3; i++)
+                        {
+                            Thread.Sleep(1000);
+                            Console.Write("*");
+                        }
+                        return 1;
+                        break;
+                    case '2':
+                        Console.WriteLine("You selected User Menu;");
+                        for (int i = 0; i < 3; i++)
+                        {
+                            Thread.Sleep(1000);
+                            Console.Write("*");
+                        }
+                        Console.WriteLine("\nOptions for  User");
+                        return 2;
+                        break;
+                    case '3':
+                        Console.Write("Exiting...");
+                        for(int i = 0; i < 4; i++)
+                        {
+                            Thread.Sleep(1000);
+                            Console.WriteLine("*");
+
+                        }
+                        return
+                    default;
+                        break;
+                }
+                return 3;
+
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid number pressed. Please press 1, 2, or 3.");
+            }
+            return 3;
+
+        }
+
     }
+
 }
 

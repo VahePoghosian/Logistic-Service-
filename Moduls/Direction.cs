@@ -14,11 +14,11 @@ namespace LogysticSystemService.Moduls
         public int Distance { get; set; }
         public float Price { get; set; }
 
-        public Direction(int id, string pointA, string pointB, int distance, int price)
+        public Direction(string pointA, string pointB, int distance, int price)
         {
             PointA = pointA;
             PointB = pointB;
-            Id = id;
+            Id = new Random().Next(100, 300);
             Distance = distance;
             Price = price;
         }

@@ -8,9 +8,10 @@ namespace LogysticSystemService.Moduls
 {
     public class CarModels
     {
-        public CarModels(int id, string name, float cofficient, int year, CarType carType)
+        public CarModels(string name, float cofficient, int year, CarType carType)
         {
-            Id = id;
+            Id  = new Random().Next(100, 300);
+
             Name = name;
             Cofficient = cofficient;
             Year = year;
