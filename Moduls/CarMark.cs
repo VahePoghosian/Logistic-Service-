@@ -11,7 +11,7 @@ namespace LogysticSystemService.Moduls
 
         public int Id { get; set; }
         public string Brand { get; set; }
-        public List<CarModels> Models { get; set; }
+        public List<CarModels>Models  { get; set; }
 
         public CarMark(string vrand, List<CarModels> models)
         {

@@ -1,16 +1,32 @@
 ﻿using LogistycSystem2.UI;
 using LogistycSystem2.Welcome;
 using LogysticSystemService.Moduls;
+using LogysticSystemService.UI.Admin;
 using System.ComponentModel;
 
 Welcome.WelcomeMessage();
 
- int option = Login.AdminOrUser();
+
+int option= Login.AdminOrUser();
 
 switch (option)
 {
     case 1:
+
+        List<AdminUser> users = new List<AdminUser>()
+        {
+            new AdminUser("admin", "Vahe123"),
+            new AdminUser("user1", "pass123"),
+            new AdminUser("alice", "qwerty")
+        };
+        Login.LoginSystem(users);
+        Login.ShowMenu();
+
         break;
+
+
+
+       
 
 
         case 2:

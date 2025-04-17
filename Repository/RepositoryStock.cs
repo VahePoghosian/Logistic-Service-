@@ -12,6 +12,8 @@ namespace LogysticSystemService.Repository
     {
         public static void InitializationCarType(List<CarType> _carTypes)
         {
+           
+
             _carTypes.Add(new CarType(1.1f, CarType.CarTypeEnum.Sedan));
             _carTypes.Add(new CarType(1.1f, CarTypeEnum.Sedan));
             _carTypes.Add(new CarType(1.3f, CarTypeEnum.SUV));
@@ -21,8 +23,9 @@ namespace LogysticSystemService.Repository
             _carTypes.Add(new CarType(1.55f, CarTypeEnum.SUV));
             _carTypes.Add(new CarType(1.3f, CarTypeEnum.Coupe));
             _carTypes.Add(new CarType(1.6f, CarTypeEnum.Hatchback));
-
         }
+
+
 
         public static void InitializeCarMark(List<CarMark> _carMarks)
         {

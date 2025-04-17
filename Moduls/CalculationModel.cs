@@ -11,12 +11,12 @@ namespace LogysticSystemService.Moduls
         public Operable Status { get; set; }
 
 
-        public CalculationModel(CarType carType, Direction carDirection, Container carContainer, CarCrushed carCrushed)
+        public CalculationModel(CarType carType, Direction carDirection, Container carContainer, Operable operable)
         {
             CarType = carType;
-            carDirection = carDirection;
-            carContainer = carContainer;
-            carCrushed = carCrushed;
+            Direction = carDirection;
+            Container = carContainer;
+            Status = operable;
         }
     }
 }

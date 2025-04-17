@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static LogysticSystemService.Moduls.Container;
 
 namespace LogysticSystemService.MainRequest
 {
@@ -11,24 +12,22 @@ namespace LogysticSystemService.MainRequest
     {
         public string From {  get; set; }
         public string To { get; set; }
-        public  Container Container { get; set; }
+        public IsOpened IsOpen { get; set; }
 
-        public CarMark CarMark { get; set; }
+        public string CarModel {  get; set; }
+        public string CarMark { get; set; }
+        public Operable Operable { get; set; }
 
-        public CarModels CarModels { get; set; }
-        public CarCrushed CarCrushed { get; set; }
-
-        public Request(string from,string to,Container container,CarMark carMark,CarModels carModels,CarCrushed carCrushed)
+        public Request(string from,string to,IsOpened isOpened,string carModel,string carMark, Operable iSOperable)
         {
             From = from;
             To = to;
-            Container = container;
-            CarModels = carModels;
-            CarCrushed = carCrushed;
+            IsOpen = isOpened;
+            CarModel = carModel;
+            CarMark = carMark;
+            Operable = iSOperable;
 
-
-        
+           
         }
-
     }
 }

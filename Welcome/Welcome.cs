@@ -1,5 +1,6 @@
 ﻿
 using LogistycSystem2.UI;
+using LogysticSystemService.UI.Admin;
 
 namespace LogistycSystem2.Welcome
 {
@@ -12,22 +13,6 @@ namespace LogistycSystem2.Welcome
             Console.WriteLine("Welcome to our logystic company!");
             Console.WriteLine("Login as Admin (Select 1)\nLogin as User(Select 2)");
 
-        }
-        public static bool  Login1(int index)
-        {
-            if(index == 1)
-            {
-                Console.WriteLine("Please enter your login and password");
-                string login=Console.ReadLine();
-                Console.WriteLine("Enter your password");
-                string password = Console.ReadLine();
-                    Login.GetSecretInput(password);
-                if (login == Login.Login1 && password == Login.Password)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }
