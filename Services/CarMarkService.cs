@@ -6,6 +6,7 @@ namespace LogistycSystem2.Services
     public class CarMarkService : IRepository<CarMark>
     {
         List<CarMark> _carmarks=new List<CarMark>();
+        
         public void Add(CarMark item)
         {
             _carmarks.Add(item);
@@ -24,7 +25,6 @@ namespace LogistycSystem2.Services
         public CarMark GetItem(Func<CarMark, bool> predicate)
         {
             return _carmarks.FirstOrDefault(predicate); 
-
         }
 
         public void Update(CarMark oldentity, CarMark newentity)

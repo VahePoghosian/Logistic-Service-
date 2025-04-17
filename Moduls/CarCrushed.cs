@@ -1,28 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LogysticSystemService.Moduls
+﻿namespace LogysticSystemService.Moduls
 {
-    public class CarCrushed
-    {
+	public class CarCrushed : Base
+	{
+		public bool IsCrushed { get; set; }
+		public Operable Status { get; set; }
 
-        public bool IsCrushed { get; set; }
-        public float Cofficient { get; set; }
-        public Operable Status { get; set; }
+		public CarCrushed(bool isCrushed, float coefficient) : base(coefficient)
+		{
+			IsCrushed = isCrushed;
+		}
+	}
 
-        public CarCrushed(bool isCrushed, float cofficient)
-        {
-            IsCrushed = isCrushed;
-            Cofficient = cofficient;
-
-        }
-    }
-    public enum Operable
-    {
-        Yes = 1,
-        No = 0,
-    }
+	public enum Operable
+	{
+		Yes = 1,
+		No = 0,
+	}
 }

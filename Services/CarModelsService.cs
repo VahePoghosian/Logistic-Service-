@@ -6,6 +6,7 @@ namespace LogistycSystem2.Services
     public class CarModelSservice : IRepository<CarModels>
     {
         List<CarModels> models=new List<CarModels>();
+
         public void Add(CarModels item)
         {
             models.Add(item);

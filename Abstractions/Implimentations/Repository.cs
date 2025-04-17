@@ -4,7 +4,8 @@ namespace LogysticSystemService.Abstractions.Implimentations
 {
     internal class Repository<T> : IRepository<T> where T : class, new()
     {
-        private readonly List<T> _list;
+        private readonly List<T> _list = new List<T>();
+
         public void Add(T entity)
         {
             _list.Add(entity);
@@ -23,6 +24,7 @@ namespace LogysticSystemService.Abstractions.Implimentations
         public T GetItem(Func<T, bool> predicate)
         {
             T item = new T();
+
             _list.ForEach(X =>
             {
                 if (predicate(X))

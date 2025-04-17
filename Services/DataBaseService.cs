@@ -23,7 +23,7 @@ namespace LogistycSystem2.Services
             
         }
 
-        public CalculationModel CalculationModel(string from, string to, System.ComponentModel.Container container, CarMark carMark, CarModels carModel)
+        public CalculationModel GetCalculationModel(string from, string to, System.ComponentModel.Container container, CarMark carMark, CarModels carModel)
         {
             var carType = _carTypeRepository.GetItem(x => x.TypeOfCar == CarTypeEnum.Sedan);
             var carCrushed = _carOperableRepository.GetItem(x => x.Status == Operable.Yes);

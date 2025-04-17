@@ -1,26 +1,21 @@
 ﻿namespace LogysticSystemService.Moduls
 {
-    public class Container
-    {
+	public class Container : Base
+	{
+		public int Id { get; set; }
+		public IsOpened IsOpenedC { get; set; }
 
-        public int Id { get; set; }
-        public float Cofficient { get; set; }
-        public IsOpened IsOpenedC { get; set; }
+		public Container(float coefficient, IsOpened isOpenedC) : base(coefficient)
+		{
+			Id = new Random().Next(100, 300);
+			IsOpenedC = isOpenedC;
+		}
 
-        public Container(float cofficient, IsOpened isOpenedC)
-        {
-            Id = new Random().Next(100, 300);
-
-            Cofficient = cofficient;
-            IsOpenedC = isOpenedC;
-
-        }
-        public enum IsOpened
-        {
-            Yes,
-            No
-        }
-
-    }
+		public enum IsOpened
+		{
+			Yes,
+			No
+		}
+	}
 }
 

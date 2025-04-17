@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LogysticSystemService.Moduls
+﻿namespace LogysticSystemService.Moduls
 {
-    public class Direction
+	public class Direction
     {
         public int Id { get; set; }
         public string PointA { get; set; }
